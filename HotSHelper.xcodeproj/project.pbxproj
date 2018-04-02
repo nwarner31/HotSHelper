@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2843D1212071A80500A76C22 /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843D1202071A80500A76C22 /* HeroListViewController.swift */; };
+		2843D1242071A8B200A76C22 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843D1232071A8B200A76C22 /* Hero.swift */; };
+		2843D1262071A9E800A76C22 /* Universe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843D1252071A9E800A76C22 /* Universe.swift */; };
+		2843D1282071C20B00A76C22 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2843D1272071C20B00A76C22 /* HeroTableViewCell.swift */; };
 		28B6ABBE206C608400FD1595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6ABBD206C608400FD1595 /* AppDelegate.swift */; };
 		28B6ABC0206C608400FD1595 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6ABBF206C608400FD1595 /* ViewController.swift */; };
 		28B6ABC3206C608400FD1595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B6ABC1206C608400FD1595 /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2843D1202071A80500A76C22 /* HeroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
+		2843D1232071A8B200A76C22 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		2843D1252071A9E800A76C22 /* Universe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universe.swift; sourceTree = "<group>"; };
+		2843D1272071C20B00A76C22 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 		28B6ABBA206C608400FD1595 /* HotSHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotSHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B6ABBD206C608400FD1595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28B6ABBF206C608400FD1595 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2843D11F2071A7AE00A76C22 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				28B6ABBF206C608400FD1595 /* ViewController.swift */,
+				2843D1202071A80500A76C22 /* HeroListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2843D1222071A89300A76C22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2843D1232071A8B200A76C22 /* Hero.swift */,
+				2843D1252071A9E800A76C22 /* Universe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		28B6ABB1206C608300FD1595 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +123,14 @@
 		28B6ABBC206C608400FD1595 /* HotSHelper */ = {
 			isa = PBXGroup;
 			children = (
+				2843D1222071A89300A76C22 /* Models */,
+				2843D11F2071A7AE00A76C22 /* ViewControllers */,
 				28B6ABBD206C608400FD1595 /* AppDelegate.swift */,
-				28B6ABBF206C608400FD1595 /* ViewController.swift */,
 				28B6ABC1206C608400FD1595 /* Main.storyboard */,
 				28B6ABC4206C608400FD1595 /* Assets.xcassets */,
 				28B6ABC6206C608400FD1595 /* LaunchScreen.storyboard */,
 				28B6ABC9206C608400FD1595 /* Info.plist */,
+				2843D1272071C20B00A76C22 /* HeroTableViewCell.swift */,
 			);
 			path = HotSHelper;
 			sourceTree = "<group>";
@@ -259,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2843D1212071A80500A76C22 /* HeroListViewController.swift in Sources */,
+				2843D1282071C20B00A76C22 /* HeroTableViewCell.swift in Sources */,
 				28B6ABC0206C608400FD1595 /* ViewController.swift in Sources */,
+				2843D1262071A9E800A76C22 /* Universe.swift in Sources */,
 				28B6ABBE206C608400FD1595 /* AppDelegate.swift in Sources */,
+				2843D1242071A8B200A76C22 /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
