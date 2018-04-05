@@ -29,7 +29,7 @@ class HeroListViewController: UIViewController, UITableViewDelegate, UITableView
         let hero = heroes[indexPath.row]
         heroCell.heroNameLabel.text = hero.name
         heroCell.heroTitleLabel.text = hero.title
-        heroCell.heroIconImageView.image = UIImage(named: hero.image)
+        heroCell.heroIconImageView.image = UIImage(named: hero.iconImage)
         heroCell.heroUniverseImageView.image = UIImage(named: hero.universe.rawValue)
         print(hero.universe.rawValue)
         heroCell.heroRoleImageView.image = UIImage(named: hero.role.rawValue)
@@ -39,13 +39,17 @@ class HeroListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let heroDetailsView = self.storyboard?.instantiateViewController(withIdentifier: "HeroDetailsViewController") as! HeroDetailsViewController
+        heroDetailsView.hero = heroes[indexPath.row]
+        navigationController?.pushViewController(heroDetailsView, animated: true)
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
-        heroes = [Hero(name: "Alexstrasza", title: "The Life Binder", description: "Queen of Dragons", role: Hero.heroRole.support, universe: Universe.warcraft, difficulty: Hero.heroDifficulty.medium, image: "alexstraszaIcon", heroDamage: 3, heroUtility: 6, heroSurvivability: 4, heroComplexity: 6), Hero(name: "Diablo", title: "Lord of Terror", description: "The Prime Evil", role: Hero.heroRole.warrior, universe: Universe.diablo, difficulty: Hero.heroDifficulty.medium, image: "diabloIcon", heroDamage: 5, heroUtility: 7, heroSurvivability: 9, heroComplexity: 5), Hero(name: "Nova", title: "Dominion Ghost", description: "Ghost of Terran Dominion", role: Hero.heroRole.assassin, universe: Universe.starcraft, difficulty: Hero.heroDifficulty.medium, image: "novaIcon", heroDamage: 10, heroUtility: 4, heroSurvivability: 2, heroComplexity: 5), Hero(name: "Tracer", title: "Agent of Overwatch", description: "Lena Oxton", role: Hero.heroRole.assassin, universe: Universe.overwatch, difficulty: Hero.heroDifficulty.hard, image: "tracerIcon", heroDamage: 8, heroUtility: 2, heroSurvivability: 5, heroComplexity: 8), Hero(name: "The Lost Vikings", title: "Lost Adventurers", description: "Polar bear wrestlers", role: Hero.heroRole.specialist, universe: Universe.classic, difficulty: Hero.heroDifficulty.veryHard, image: "theLostVikingsIcon", heroDamage: 7, heroUtility: 5, heroSurvivability: 6, heroComplexity: 10)]
+        heroes = [Hero(name: "Alexstrasza", title: "The Life Binder", description: "Queen of Dragons", role: Hero.heroRole.support, universe: Universe.warcraft, difficulty: Hero.heroDifficulty.medium, iconImage: "alexstraszaIcon", fullImage: "alexstraszaFull", heroDamage: 3, heroUtility: 6, heroSurvivability: 4, heroComplexity: 6), Hero(name: "Diablo", title: "Lord of Terror", description: "The Prime Evil", role: Hero.heroRole.warrior, universe: Universe.diablo, difficulty: Hero.heroDifficulty.medium, iconImage: "diabloIcon", fullImage: "diabloFull", heroDamage: 5, heroUtility: 7, heroSurvivability: 9, heroComplexity: 5), Hero(name: "Nova", title: "Dominion Ghost", description: "Ghost of Terran Dominion", role: Hero.heroRole.assassin, universe: Universe.starcraft, difficulty: Hero.heroDifficulty.medium, iconImage: "novaIcon", fullImage: "novaFull", heroDamage: 10, heroUtility: 4, heroSurvivability: 2, heroComplexity: 5), Hero(name: "Tracer", title: "Agent of Overwatch", description: "Lena Oxton", role: Hero.heroRole.assassin, universe: Universe.overwatch, difficulty: Hero.heroDifficulty.hard, iconImage: "tracerIcon", fullImage: "tracerFull", heroDamage: 8, heroUtility: 2, heroSurvivability: 5, heroComplexity: 8), Hero(name: "The Lost Vikings", title: "Lost Adventurers", description: "Polar bear wrestlers", role: Hero.heroRole.specialist, universe: Universe.classic, difficulty: Hero.heroDifficulty.veryHard, iconImage: "theLostVikingsIcon", fullImage: "theLostVikingsFull", heroDamage: 7, heroUtility: 5, heroSurvivability: 6, heroComplexity: 10)]
         heroesTableView.delegate = self
         
     }

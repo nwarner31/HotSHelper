@@ -15,20 +15,22 @@ class Hero {
     let role: heroRole
     let universe: Universe
     let difficulty: heroDifficulty
-    let image: String
+    let iconImage: String
+    let fullImage: String
     let heroDamage: Int
     let heroUtility: Int
     let heroSurvivability: Int
     let heroComplexity: Int
     
-    init(name: String, title: String, description: String, role: heroRole, universe: Universe, difficulty: heroDifficulty, image: String, heroDamage: Int, heroUtility: Int, heroSurvivability: Int, heroComplexity: Int) {
+    init(name: String, title: String, description: String, role: heroRole, universe: Universe, difficulty: heroDifficulty, iconImage: String, fullImage: String, heroDamage: Int, heroUtility: Int, heroSurvivability: Int, heroComplexity: Int) {
         self.name = name
         self.title = title
         self.description = description
         self.role = role
         self.universe = universe
         self.difficulty = difficulty
-        self.image = image
+        self.iconImage = iconImage
+        self.fullImage = fullImage
         self.heroDamage = heroDamage
         self.heroUtility = heroUtility
         self.heroSurvivability = heroSurvivability
@@ -41,10 +43,10 @@ class Hero {
         case support = "support"
         case specialist = "specialist"
     }
-    enum heroDifficulty {
-        case easy
-        case medium
-        case hard
-        case veryHard
+    enum heroDifficulty : String {
+        case easy = "easy"
+        case medium = "medium"
+        case hard = "hard"
+        case veryHard = "veryHard"
     }
 }

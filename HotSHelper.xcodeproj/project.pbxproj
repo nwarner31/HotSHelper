@@ -18,6 +18,7 @@
 		28B6ABC8206C608400FD1595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B6ABC6206C608400FD1595 /* LaunchScreen.storyboard */; };
 		28B6ABD3206C608400FD1595 /* HotSHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6ABD2206C608400FD1595 /* HotSHelperTests.swift */; };
 		28B6ABDE206C608400FD1595 /* HotSHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6ABDD206C608400FD1595 /* HotSHelperUITests.swift */; };
+		28D5D3A62075BF9A0088C946 /* HeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D5D3A52075BF9A0088C946 /* HeroDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		28B6ABD9206C608400FD1595 /* HotSHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotSHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B6ABDD206C608400FD1595 /* HotSHelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSHelperUITests.swift; sourceTree = "<group>"; };
 		28B6ABDF206C608400FD1595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D5D3A52075BF9A0088C946 /* HeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				28B6ABBF206C608400FD1595 /* ViewController.swift */,
 				2843D1202071A80500A76C22 /* HeroListViewController.swift */,
+				28D5D3A52075BF9A0088C946 /* HeroDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				2843D1212071A80500A76C22 /* HeroListViewController.swift in Sources */,
 				2843D1282071C20B00A76C22 /* HeroTableViewCell.swift in Sources */,
+				28D5D3A62075BF9A0088C946 /* HeroDetailsViewController.swift in Sources */,
 				28B6ABC0206C608400FD1595 /* ViewController.swift in Sources */,
 				2843D1262071A9E800A76C22 /* Universe.swift in Sources */,
 				28B6ABBE206C608400FD1595 /* AppDelegate.swift in Sources */,
